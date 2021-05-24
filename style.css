@@ -5,10 +5,12 @@ body{
 
 #background {
   background-image: url('assets/background2.jpg');
-  height: 800px;
+  height: 710px;
   width: 100%;
   background-size: cover;
   visibility: hidden;
+  margin: 0px;
+  padding: 0px;
 }
 
 h1{
@@ -16,9 +18,9 @@ h1{
   color: rgb(44, 201, 30);
   border: rgb(6, 209, 6);
   border-width: 10px;
-  border-style: ridge;
+  border-style: groove;
   text-align: center;
-  text-shadow: 2px 2px #1b2219;
+  text-shadow: 4px 4px #1b2219;
 
 }
 
@@ -27,13 +29,13 @@ h1{
   height: 55px;
   width: 75px;
   position: absolute;
-  top: 700px;
+  top: 720px;
   left: 550px;
-  background-position: -165px;
+  background-position: -160px;
 }
 
 #missiles {
-  height: 800px;
+  height: 710px;
   width: 1200px;
   position: absolute;
 }
@@ -57,20 +59,22 @@ h1{
   height: 32px;
   width: 52px;
   position: absolute;
+  
 }
 
 #enemies {
-  height: 800px;
+  height: 710px;
   width: 1200px;
   position: absolute;
 }
 
 dialog {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130
+  px;
   /* background-color: blue; */
   opacity: 0.6;
-  font-size: 50px;
+  font-size: 32px;
   color: red;
 
   position: absolute;
@@ -84,7 +88,7 @@ dialog {
   background-color: #4caf50; /* Green */
   border: none;
   color: white;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -101,6 +105,8 @@ dialog {
   height: 800px;
   width: 100%;
   text-align: center;
+  margin: 0px;
+  padding: 0px;
  
 }
 
@@ -144,3 +150,29 @@ li {
   background-color: #4caf50;
   color: rgb(225, 247, 221);
 }
+
+
+.content {
+  color: #ccc;
+  text-align: center;
+  padding: 0 20px;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 22px;
+  line-height: 1.5em;
+  text-shadow: 2px 2px #1b2219;
+}
+
+code {
+  background-color: #222;
+  background: linear-gradient(rgb(124, 124, 124), rgb(240, 0, 0));
+  line-height: 1.3em;
+  display: inline-block;
+  border-radius: 3px;
+  font-family: monospace;
+  padding: 1px 5px;
+  margin: 0 2px;
+}
+

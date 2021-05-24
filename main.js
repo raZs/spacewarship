@@ -7,7 +7,8 @@ class Game {
     this.snd = new Audio('assets/gameSounds/shoot.wav');
     this.snd2 = new Audio('assets/gameSounds/explosion.wav');
     this.snd3 = new Audio('assets/gameSounds/heroDead.wav');
-    this.MAX_HEIGHT = 800;
+    this.snd4 = new Audio('assets/gameSounds/enemyshoot.wav')
+    this.MAX_HEIGHT = 710;
     this.MAX_WIDTH = document.getElementById('background').offsetWidth;
     this.ref = null;
     this.enemyCount = 0;
@@ -24,11 +25,11 @@ class Game {
       this.enemyCount = this.enemyCount + 2;
     }
 
-    this.hero = new Hero(700, 550);
+    this.hero = new Hero(650, 550);
 
     var heroElement = document.getElementById('hero');
     heroElement.style.left = '550px';
-    heroElement.style.top = '700px';
+    heroElement.style.top = '650px';
 
     var enemyElement = document.getElementById('enemy');
 
@@ -40,20 +41,26 @@ class Game {
           //sprite left here
           heroElement.style.backgroundPosition = '0px 0px';
           this.hero.moveHero();
-        } else if (e.keyCode === 39 && this.hero.left <= this.MAX_WIDTH - 50) {
+        } else if (e.keyCode === 39 && this.hero.left <= this.MAX_WIDTH - 100) {
           this.hero.left = this.hero.left + 10;
           //sprite right here
           heroElement.style.backgroundPosition = '-328px 0px';
+          this.hero.moveHero();
 
-          this.hero.moveHero();
-        } else if (e.keyCode === 38 && this.hero.top >= 50) {
-          this.hero.top = this.hero.top - 10;
-          this.hero.moveHero();
-        } else if (e.keyCode === 40 && this.hero.top <= this.MAX_HEIGHT - 50) {
-          this.hero.top = this.hero.top + 10;
-          this.hero.moveHero();
-        } else if (e.keyCode === 32) {
-          this.snd.play();
+        }
+        
+        
+        // else if (e.keyCode === 38 && this.hero.top >= 50) {
+        //   this.hero.top = this.hero.top - 10;
+        //   this.hero.moveHero();
+        // } else if (e.keyCode === 40 && this.hero.top <= this.MAX_HEIGHT - 50) {
+        //   this.hero.top = this.hero.top + 10;
+        //   this.hero.moveHero();
+        // }
+        
+        
+        else if (e.keyCode === 32) {
+          //this.snd.play();
           this.missiles.push({
             left: this.hero.left + 15,
             top: this.hero.top,
@@ -127,16 +134,16 @@ class Game {
       this.enemyMissiles[missile].top = this.enemyMissiles[missile].top + 5 * (difficulty + 1);
     }
   }
-
+   // 
   enemyAttack() {
     var random = Math.floor(Math.random() * (50 - 0)) + 0;
     var bound;
     if (this.difficulty == 0) {
-      bound = 5;
+      bound = 10;
     } else if (this.difficulty == 1) {
-      bound = 15;
+      bound = 20;
     } else if (this.difficulty == 2) {
-      bound = 25;
+      bound = 30;
     }
     if (random < bound) {
       this.createEnemyMissiles();
@@ -154,7 +161,7 @@ class Game {
     for (var x = 0; x < this.enemyMissiles.length; x++) {
       if (this.enemyMissiles[x].top >= this.hero.top && this.enemyMissiles[x].top <= this.hero.top + 33) {
         if (this.enemyMissiles[x].left >= this.hero.left && this.enemyMissiles[x].left <= this.hero.left + 53) {
-          this.snd3.play();
+          //this.snd3.play();
           this.heroHasDied = true;
           this.gameOver();
         }
@@ -187,7 +194,7 @@ class Game {
         ) {
           // console.log('HIT!');
           this.enemies.splice(enemy, 1);
-          this.snd2.play();
+          //this.snd2.play();
           this.missiles.splice(missile, 1);
         }
       }
@@ -210,7 +217,7 @@ class Game {
         this.hero.left <= this.enemies[x].left + 50 &&
         this.hero.left >= this.enemies[x].left
       ) {
-        this.snd3.play();
+        //this.snd3.play();
         this.heroHasDied = true;
         this.gameOver();
       }
