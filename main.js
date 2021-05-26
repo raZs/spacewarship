@@ -116,7 +116,7 @@ class Game {
     var random = Math.floor(Math.random() * (max - min)) + min;
 
     this.enemyMissiles.push({
-      left: this.enemies[random].left + 15,
+      left: this.enemies[random].left + 5,
       top: this.enemies[random].top,
     });
   }
@@ -334,7 +334,8 @@ function start(level) {
   var element = document.getElementById('welcome');
   element.style.visibility = 'hidden';
   element.parentNode.removeChild(element);
-  document.getElementById('background').style.visibility = 'visible';
+  // document.getElementById('background').style.visibility = 'visible';
+  document.getElementById('background').style.display = 'block';
 
   gameLoop(difficulty);
 }

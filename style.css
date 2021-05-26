@@ -8,7 +8,8 @@ body{
   height: 710px;
   width: 100%;
   background-size: cover;
-  visibility: hidden;
+  /* visibility: hidden; */
+  display:none;
   margin: 0px;
   padding: 0px;
 }
@@ -102,17 +103,16 @@ dialog {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(44, 201, 30);
   background-image: url('assets/universe3.jpg');
-  height: 800px;
+  height: 710px;
   width: 100%;
   text-align: center;
   margin: 0px;
   padding: 0px;
- 
 }
 
 li {
   list-style-type: none;
- margin: 2px;
+  margin: 2px;
 }
 
 .welcomeContents {
@@ -141,7 +141,6 @@ li {
   top: 20px;
   border: 2px solid #4caf50;
   background-color: rgb(218, 250, 217);
- 
   width: 125px;
   font-size: 25px;
 }
