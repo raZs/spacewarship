@@ -19,9 +19,11 @@ class Game {
     this.enemyMissiles = [];
     winCheck = 1;
 
+    // generate Enemies 
+
     for (var left = 200; left <= 1000; left = left + 100) {
-      this.enemies.push(new Enemy(left, 100));
-      this.enemies.push(new Enemy(left, 175));
+      this.enemies.push(new Enemy(left + 25, 100));
+      this.enemies.push(new Enemy(left -25, 165));
       this.enemyCount = this.enemyCount + 2;
     }
 
@@ -48,8 +50,8 @@ class Game {
           this.hero.moveHero();
 
         }
-        
-        
+
+
         // else if (e.keyCode === 38 && this.hero.top >= 50) {
         //   this.hero.top = this.hero.top - 10;
         //   this.hero.moveHero();
@@ -57,8 +59,8 @@ class Game {
         //   this.hero.top = this.hero.top + 10;
         //   this.hero.moveHero();
         // }
-        
-        
+
+
         else if (e.keyCode === 32) {
           //this.snd.play();
           this.missiles.push({
@@ -134,7 +136,7 @@ class Game {
       this.enemyMissiles[missile].top = this.enemyMissiles[missile].top + 5 * (difficulty + 1);
     }
   }
-   // 
+  // 
   enemyAttack() {
     var random = Math.floor(Math.random() * (50 - 0)) + 0;
     var bound;
