@@ -52,15 +52,6 @@ class Game {
         }
 
 
-        // else if (e.keyCode === 38 && this.hero.top >= 50) {
-        //   this.hero.top = this.hero.top - 10;
-        //   this.hero.moveHero();
-        // } else if (e.keyCode === 40 && this.hero.top <= this.MAX_HEIGHT - 50) {
-        //   this.hero.top = this.hero.top + 10;
-        //   this.hero.moveHero();
-        // }
-
-
         else if (e.keyCode === 32) {
           //this.snd.play();
           this.missiles.push({
