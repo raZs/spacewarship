@@ -117,8 +117,8 @@ class Game {
   drawEnemiesMissiles() {
     document.getElementById('enemyMissiles').innerHTML = '';
     for (var missile = 0; missile < this.enemyMissiles.length; missile++) {
-      document.getElementById('enemyMissiles').innerHTML += `<div class = 'enemyMissiles' style = 'left:${this.enemyMissiles[missile].left}px;
-				top:${this.enemyMissiles[missile].top}px;'></div>`;
+      document.getElementById('enemyMissiles').innerHTML += `<div class = 'enemyMissiles' style = 'left:${this.enemyMissiles[missile].left + 15}px;
+				top:${this.enemyMissiles[missile].top + 25}px;'></div>`;
     }
   }
 
