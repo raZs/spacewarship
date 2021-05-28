@@ -5,7 +5,7 @@ body {
 
 #background {
   background-image: url("assets/background2.jpg");
-  height: 710px;
+  height: 715px;
   width: 100%;
   background-size: cover;
   /* visibility: hidden; */
@@ -35,7 +35,7 @@ h1 {
 }
 
 #missiles {
-  height: 710px;
+  height: 700px;
   width: 1200px;
   position: absolute;
 }
@@ -62,7 +62,7 @@ h1 {
 }
 
 #enemies {
-  height: 710px;
+  height: 700px;
   width: 1200px;
   position: absolute;
 }
@@ -100,7 +100,7 @@ dialog {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(44, 201, 30);
   background-image: url("assets/universe3.jpg");
-  height: 710px;
+  height: 700px;
   width: 100%;
   text-align: center;
   margin: 0px;

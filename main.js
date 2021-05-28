@@ -8,7 +8,7 @@ class Game {
     this.snd2 = new Audio('assets/gameSounds/explosion.wav');
     this.snd3 = new Audio('assets/gameSounds/heroDead.wav');
     this.snd4 = new Audio('assets/gameSounds/enemyshoot.wav')
-    this.MAX_HEIGHT = 710;
+    this.MAX_HEIGHT = 700;
     this.MAX_WIDTH = document.getElementById('background').offsetWidth;
     this.ref = null;
     this.enemyCount = 0;
