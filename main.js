@@ -53,7 +53,7 @@ class Game {
 
 
         else if (e.keyCode === 32) {
-          //this.snd.play();
+          this.snd.play();
           this.missiles.push({
             left: this.hero.left + 15,
             top: this.hero.top,
@@ -154,7 +154,7 @@ class Game {
     for (var x = 0; x < this.enemyMissiles.length; x++) {
       if (this.enemyMissiles[x].top >= this.hero.top && this.enemyMissiles[x].top <= this.hero.top + 33) {
         if (this.enemyMissiles[x].left >= this.hero.left && this.enemyMissiles[x].left <= this.hero.left + 53) {
-          //this.snd3.play();
+          this.snd3.play();
           this.heroHasDied = true;
           this.gameOver();
         }
@@ -185,9 +185,8 @@ class Game {
           this.missiles[missile].left <= this.enemies[enemy].left + 50 &&
           this.missiles[missile].left >= this.enemies[enemy].left
         ) {
-          // console.log('HIT!');
           this.enemies.splice(enemy, 1);
-          //this.snd2.play();
+          this.snd2.play();
           this.missiles.splice(missile, 1);
         }
       }
@@ -210,7 +209,7 @@ class Game {
         this.hero.left <= this.enemies[x].left + 50 &&
         this.hero.left >= this.enemies[x].left
       ) {
-        //this.snd3.play();
+        this.snd3.play();
         this.heroHasDied = true;
         this.gameOver();
       }
@@ -282,7 +281,7 @@ class Enemy {
   }
 }
 
-//-----Classes ^
+//-----Classes 
 
 var game;
 
